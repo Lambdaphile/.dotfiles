@@ -1,0 +1,2 @@
+# Encrypts following files with git-crypt 
+zsh/.zsh_history filter=git-crypt diff=git-crypt

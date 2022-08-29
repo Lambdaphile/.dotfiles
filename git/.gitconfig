@@ -1,0 +1,10 @@
+[user]
+  name = fpdude
+  email = fpdude@proton.me
+
+[includeif "gitdir:~/Projects/"]
+  path = .gitconfig-projects
+
+[includeIf "gitdir:~/Work/"]
+  path = .gitconfig-work
+
