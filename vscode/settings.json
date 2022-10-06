@@ -642,6 +642,7 @@
   "editor.minimap.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.layoutControl.enabled": false,
+  "git.mergeEditor": false,
   "gitlens.mode.active": "zen",
   "workbench.activityBar.visible": false
 }
