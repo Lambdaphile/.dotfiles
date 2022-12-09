@@ -1,4 +1,5 @@
 {
+  "material-icon-theme.hidesExplorerArrows": true,
   "typescript.suggest.autoImports": false,
   "eslint.quiet": true,
   "javascript.suggest.autoImports": false,
@@ -461,7 +462,7 @@
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "Menlo",
+  "editor.fontFamily": "Hack Nerd Font Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.fontWeight": "normal",
@@ -597,8 +598,8 @@
       // "terminalCursor.foreground": "#ffe261"
       // "widget.shadow": "#1d1923"
     },
-    "[Night Owl (No Italics)]": {
-      "breadcrumb.foreground": "#D7DBE0",
+    "[Gruvbox Dark Hard]": {
+      "breadcrumb.background": "#ff0000",
       // "editorCursor.foreground": "#D7DBE0",
       "pickerGroup.foreground": "#D7DBE0"
       //   "activityBar.background": "#000C1D",
@@ -615,34 +616,19 @@
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.sideBar.location": "left",
   "terminal.integrated.fontWeightBold": "normal",
-  "projectManager.any.ignoredFolders": ["node_modules"],
-  "projectManager.vscode.ignoredFolders": ["node_modules", "typings", "test"],
-  "projectManager.git.ignoredFolders": [
-    "node_modules",
-    "typings",
-    "test",
-    ".haxelib"
-  ],
-  "projectManager.hg.ignoredFolders": [
-    "node_modules",
-    "typings",
-    "test",
-    ".haxelib"
-  ],
-  "projectManager.svn.ignoredFolders": ["node_modules", "typings", "test"],
   "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.folders.color": "#42a5f5",
-  "terminal.integrated.automationShell.linux": "",
+  // "terminal.integrated.automationShell.linux": "",
   "workbench.editor.showTabs": false,
-  "material-icon-theme.activeIconPack": "react_redux",
   "diffEditor.renderSideBySide": false,
   "workbench.colorTheme": "GitHub Dark Default",
-  "cSpell.enabled": false,
+  "cSpell.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "editor.minimap.enabled": false,
   "workbench.editor.enablePreview": false,
   "workbench.layoutControl.enabled": false,
   "git.mergeEditor": false,
+  "workbench.activityBar.visible": false,
   "gitlens.mode.active": "zen",
-  "workbench.activityBar.visible": false
+  "material-icon-theme.folders.theme": "classic",
+  "material-icon-theme.folders.color": "#7daea3"
 }

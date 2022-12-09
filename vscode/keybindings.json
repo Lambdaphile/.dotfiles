@@ -4,10 +4,6 @@
     "key": "cmd+b"
   },
   {
-    "command": "workbench.view.extension.project-manager",
-    "key": "shift+cmd+b"
-  },
-  {
     "key": "ctrl+`",
     "command": "workbench.action.togglePanel"
   },
@@ -58,11 +54,6 @@
   {
     "command": "-workbench.action.navigateForward",
     "key": "ctrl+shift+-"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
   },
   {
     "key": "ctrl+`",
