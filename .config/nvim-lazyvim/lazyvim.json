@@ -1,5 +1,14 @@
 {
-  "extras": [],
+  "extras": [
+    "lazyvim.plugins.extras.lang.clojure",
+    "lazyvim.plugins.extras.lang.git",
+    "lazyvim.plugins.extras.lang.json",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.ui.mini-starter",
+    "lazyvim.plugins.extras.ui.treesitter-context"
+  ],
   "install_version": 8,
   "news": {
     "NEWS.md": "10960"
