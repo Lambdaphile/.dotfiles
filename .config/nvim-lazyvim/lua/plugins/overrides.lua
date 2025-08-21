@@ -51,11 +51,6 @@ return {
   },
 
   {
-    "akinsho/bufferline.nvim",
-    enabled = false,
-  },
-
-  {
     "echasnovski/mini.starter",
     opts = {
       header = function()
@@ -100,5 +95,10 @@ return {
     opts = {
       inlay_hints = { enabled = false },
     },
+  },
+
+  {
+    "folke/snacks.nvim",
+    opts = {},
   },
 }
