@@ -99,6 +99,29 @@ return {
 
   {
     "folke/snacks.nvim",
-    opts = {},
+    opts = function(_, opts)
+      local sources = opts.picker.sources or {}
+      local source_names = {
+        "files",
+        "explorer",
+        "grep",
+        "grep_word",
+        "grep_buffers",
+      }
+      local source_opts = {
+        hidden = true,
+        ignored = true,
+        exclude = { ".git" },
+      }
+
+      for _, name in ipairs(source_names) do
+        sources[name] =
+          vim.tbl_extend("force", sources[name] or {}, source_opts)
+      end
+
+      opts.picker.sources = sources
+
+      return opts
+    end,
   },
 }
