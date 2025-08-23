@@ -16,3 +16,9 @@ map(
   "<cmd>wa<cr><esc>",
   { desc = "Save All Files" }
 )
+map("n", "<leader>uv", function()
+  local gs = require("gitsigns")
+  gs.toggle_linehl()
+  gs.toggle_deleted()
+  gs.toggle_word_diff()
+end, { desc = "Visualize Hunks" })
