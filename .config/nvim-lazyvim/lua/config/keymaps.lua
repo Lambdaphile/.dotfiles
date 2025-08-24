@@ -6,12 +6,6 @@ local map = LazyVim.safe_keymap_set
 
 map(
   { "i", "x", "n", "s" },
-  "<leader>fs",
-  "<cmd>wa<cr><esc>",
-  { desc = "Save All Files" }
-)
-map(
-  { "i", "x", "n", "s" },
   "<C-s>",
   "<cmd>wa<cr><esc>",
   { desc = "Save All Files" }
