@@ -1,4 +1,5 @@
-local u = require("utils")
+local utils = require("utils")
+local constants = require("constants")
 
 return {
   {
@@ -65,23 +66,27 @@ return {
         return table.concat(fortune_lines, "\n")
       end,
       items = {
-        u.new_section("ff → Find file", LazyVim.pick(), "Telescope"),
-        u.new_section(
+        utils.new_section("ff → Find file", LazyVim.pick(), "Telescope"),
+        utils.new_section(
           "rf → Recent files",
           LazyVim.pick("oldfiles"),
           "Telescope"
         ),
-        u.new_section(
+        utils.new_section(
           "ft → Find text",
           LazyVim.pick("live_grep"),
           "Telescope"
         ),
-        u.new_section("n  → New file", "ene | startinsert", "Built-in"),
-        u.new_section("q  → Quit", "qa", "Built-in"),
-        u.new_section("c  → Config", LazyVim.pick.config_files(), "Config"),
-        u.new_section("l  → Lazy", "Lazy", "Config"),
-        u.new_section("le → Lazy extras", "LazyExtras", "Config"),
-        u.new_section(
+        utils.new_section("n  → New file", "ene | startinsert", "Built-in"),
+        utils.new_section("q  → Quit", "qa", "Built-in"),
+        utils.new_section(
+          "c  → Config",
+          LazyVim.pick.config_files(),
+          "Config"
+        ),
+        utils.new_section("l  → Lazy", "Lazy", "Config"),
+        utils.new_section("le → Lazy extras", "LazyExtras", "Config"),
+        utils.new_section(
           "rs → Restore session",
           [[lua require("persistence").load()]],
           "Session"
@@ -99,30 +104,19 @@ return {
 
   {
     "folke/snacks.nvim",
-    opts = function(_, opts)
-      local sources = opts.picker.sources or {}
-      local source_names = {
-        "files",
-        "explorer",
-        "grep",
-        "grep_word",
-        "grep_buffers",
-      }
-      local source_opts = {
-        hidden = true,
-        ignored = true,
-        exclude = { ".git" },
-      }
+    opts = {
+      picker = {
+        sources = {
+          files = constants.PICKER_SETTINGS,
+          grep = constants.PICKER_SETTINGS,
+          grep_word = constants.PICKER_SETTINGS,
+          grep_buffer = constants.PICKER_SETTINGS,
+          explorer = constants.PICKER_SETTINGS,
+        },
+      },
+    },
+  },
 
-      for _, name in ipairs(source_names) do
-        sources[name] =
-          vim.tbl_extend("force", sources[name] or {}, source_opts)
-      end
-
-      opts.picker.sources = sources
-
-      return opts
-    end,
   {
     "saghen/blink.cmp",
     opts = {
