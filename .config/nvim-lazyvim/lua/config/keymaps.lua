@@ -16,3 +16,7 @@ map("n", "<leader>uv", function()
   gs.toggle_deleted()
   gs.toggle_word_diff()
 end, { desc = "Visualize Hunks" })
+
+Snacks.toggle
+  .option("showtabline", { off = 0, on = 2, name = "Tabline" })
+  :map("<leader>uA")
