@@ -66,28 +66,35 @@ return {
         return table.concat(fortune_lines, "\n")
       end,
       items = {
-        utils.new_section("ff → Find file", LazyVim.pick(), "Telescope"),
+        utils.new_section("ff - Find file", LazyVim.pick(), "Telescope"),
         utils.new_section(
-          "rf → Recent files",
+          "ft - Find text",
+          LazyVim.pick("live_grep"),
+          "Telescope"
+        ),
+
+        utils.new_section(
+          "rf - Recent files",
           LazyVim.pick("oldfiles"),
           "Telescope"
         ),
         utils.new_section(
-          "ft → Find text",
-          LazyVim.pick("live_grep"),
+          "sp - Select project",
+          LazyVim.pick("projects"),
           "Telescope"
         ),
-        utils.new_section("n  → New file", "ene | startinsert", "Built-in"),
-        utils.new_section("q  → Quit", "qa", "Built-in"),
+        utils.new_section("n  - New file", "ene | startinsert", "Built-in"),
+        utils.new_section("q  - Quit", "qa", "Built-in"),
+        utils.new_section("c  - Config", LazyVim.pick.config_files(), "Config"),
+        utils.new_section("l  - Lazy", "Lazy", "Config"),
+        utils.new_section("le - Lazy extras", "LazyExtras", "Config"),
         utils.new_section(
-          "c  → Config",
-          LazyVim.pick.config_files(),
-          "Config"
+          "ss - Select session",
+          [[lua require("persistence").select()]],
+          "Session"
         ),
-        utils.new_section("l  → Lazy", "Lazy", "Config"),
-        utils.new_section("le → Lazy extras", "LazyExtras", "Config"),
         utils.new_section(
-          "rs → Restore session",
+          "rs - Restore session",
           [[lua require("persistence").load()]],
           "Session"
         ),
