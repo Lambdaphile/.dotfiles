@@ -111,17 +111,19 @@ return {
 
   {
     "folke/snacks.nvim",
-    opts = {
-      picker = {
-        sources = {
-          files = constants.PICKER_SETTINGS,
-          grep = constants.PICKER_SETTINGS,
-          grep_word = constants.PICKER_SETTINGS,
-          grep_buffer = constants.PICKER_SETTINGS,
-          explorer = constants.PICKER_SETTINGS,
-        },
-      },
-    },
+    opts = function(_, opts)
+      local sources = opts.picker.sources or {}
+      local source_names =
+        { "files", "grep", "grep_world", "grep_buffer", "explorer" }
+
+      for _, name in ipairs(source_names) do
+        sources[name] = constants.PICKER_SETTINGS
+      end
+
+      opts.picker.sources = sources
+
+      return opts
+    end,
   },
 
   {
