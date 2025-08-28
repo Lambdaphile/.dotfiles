@@ -145,4 +145,22 @@ return {
       },
     },
   },
+
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    opts = function(_, opts)
+      local headers = opts.headers or {}
+      headers.user = "## 🦸 Me "
+      headers.assistant = "## 🦉 Wan "
+      opts.headers = headers
+
+      local window = opts.window or {}
+      window.width = 0.33
+      opts.window = window
+
+      opts.highlight_headers = true
+
+      return opts
+    end,
+  },
 }
