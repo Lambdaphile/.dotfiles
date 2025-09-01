@@ -72,7 +72,6 @@ return {
           LazyVim.pick("live_grep"),
           "Telescope"
         ),
-
         utils.new_section(
           "rf - Recent files",
           LazyVim.pick("oldfiles"),
@@ -144,23 +143,5 @@ return {
         auto_toggle_bufferline = false,
       },
     },
-  },
-
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    opts = function(_, opts)
-      local headers = opts.headers or {}
-      headers.user = "## 🦸 Me "
-      headers.assistant = "## 🦉 Wan "
-      opts.headers = headers
-
-      local window = opts.window or {}
-      window.width = 0.33
-      opts.window = window
-
-      opts.highlight_headers = true
-
-      return opts
-    end,
   },
 }

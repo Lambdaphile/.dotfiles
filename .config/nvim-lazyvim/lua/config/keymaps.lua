@@ -2,6 +2,7 @@
 -- Default keymaps that are always set:
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here.
+local wk = require("which-key")
 local map = LazyVim.safe_keymap_set
 
 map(
@@ -20,3 +21,17 @@ end, { desc = "Visualize Hunks" })
 Snacks.toggle
   .option("showtabline", { off = 0, on = 2, name = "Tabline" })
   :map("<leader>uA")
+
+wk.add({
+  { "<leader>a", group = "ai" },
+  {
+    "<leader>aa",
+    "<cmd>CodeCompanionChat Toggle<cr>",
+    desc = "Toggle Chat",
+    mode = "n",
+  },
+  {
+    "<leader>ad",
+    group = "Diff Actions",
+  },
+})
