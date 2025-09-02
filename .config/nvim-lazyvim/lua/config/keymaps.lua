@@ -11,12 +11,13 @@ map(
   "<cmd>wa<cr><esc>",
   { desc = "Save All Files" }
 )
-map("n", "<leader>uv", function()
+
+map("n", "<leader>uH", function()
   local gs = require("gitsigns")
   gs.toggle_linehl()
   gs.toggle_deleted()
   gs.toggle_word_diff()
-end, { desc = "Visualize Hunks" })
+end, { desc = "Highlight Hunks" })
 
 Snacks.toggle
   .option("showtabline", { off = 0, on = 2, name = "Tabline" })
