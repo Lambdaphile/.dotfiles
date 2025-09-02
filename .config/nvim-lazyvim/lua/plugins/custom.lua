@@ -6,7 +6,6 @@ return {
     end,
     dependencies = {
       { "nvim-lua/plenary.nvim", version = false },
-      "folke/noice.nvim",
       "nvim-treesitter/nvim-treesitter",
       "ravitemer/codecompanion-history.nvim",
     },
