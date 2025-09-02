@@ -1,4 +1,3 @@
-local const = require("const")
 local M = {}
 
 function M.make_header()
@@ -7,7 +6,11 @@ function M.make_header()
   local cowsay_header = vim.split(cowsay, "\n")
 
   for i, line in ipairs(cowsay_header) do
-    cowsay_header[i] = indent .. line
+    if line == "" then
+      table.remove(cowsay_header, i)
+    else
+      cowsay_header[i] = indent .. line
+    end
   end
 
   return table.concat(cowsay_header, "\n")
